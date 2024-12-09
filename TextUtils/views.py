@@ -37,7 +37,7 @@ def analyze(request):
     if newlineremover == 'on':
         analyzed = ''
         for char in djtext:
-            if char != "\n":
+            if char != "\n" and char != "\r":
                 analyzed = analyzed + char
 
         params = {'purpose': "Removing the new lines", 'analyzed_text': analyzed}
